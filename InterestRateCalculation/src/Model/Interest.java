@@ -8,6 +8,7 @@ public class Interest {
     private int principal;
     private double interest;
     private int year;
+    private int amount;
 
     public int getPrincipal() {
         return principal;
@@ -31,5 +32,13 @@ public class Interest {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }

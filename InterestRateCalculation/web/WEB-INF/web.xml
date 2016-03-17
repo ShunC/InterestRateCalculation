@@ -11,4 +11,40 @@
         <servlet-name>InterestRateServlet</servlet-name>
         <url-pattern>/InterestRateServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>YearServlet</servlet-name>
+        <servlet-class>Servlet.YearServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>YearServlet</servlet-name>
+        <url-pattern>/YearServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PrincipalServlet</servlet-name>
+        <servlet-class>Servlet.PrincipalServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PrincipalServlet</servlet-name>
+        <url-pattern>/PrincipalServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InterestServlet</servlet-name>
+        <servlet-class>Servlet.InterestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InterestServlet</servlet-name>
+        <url-pattern>/InterestServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--<filter>-->
+        <!--<filter-name>ChangeFilter</filter-name>-->
+        <!--<filter-class>Filter.ChangeFilter</filter-class>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>ChangeFilter</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
 </web-app>

@@ -1,7 +1,8 @@
 package Servlet;
 
 import Model.Interest;
-
+import Service.I_InterestService;
+import Service.InterestService;
 import Service.OrInterestService;
 
 import javax.servlet.RequestDispatcher;
@@ -13,32 +14,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by pc on 2016/3/11.
+ * Created by pc on 2016/3/17.
  */
-public class InterestRateServlet extends HttpServlet {
-    /*
-    * 创建 interest
-    *  ：本金 利率 年份
-    * */
+public class InterestServlet extends HttpServlet {
+
     private Interest interest = new Interest();
 
-    /*
-    * post 方法
-    * */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         interest.setPrincipal(Integer.parseInt(request.getParameter("principal")));
-        interest.setInterest(Double.parseDouble(request.getParameter("interestRate")));
+        interest.setAmount(Integer.parseInt(request.getParameter("amount")));
         interest.setYear(Integer.parseInt(request.getParameter("year")));
 
-        OrInterestService orInterestService = new OrInterestService();
-
-//        I_InterestService compoundInterestService = new SingleInterestService();
-//        System.out.println(compoundInterestService.calculate(interest));
-
-        String compound = orInterestService.orInterest(request.getParameter("interest"),interest);
+        I_InterestService interestService = new InterestService();
+        String  compound = interestService.calculate(interest);
         if(compound != null ){
             request.getSession().setAttribute("compound",compound);
-            request.getSession().setAttribute("change" , "总利和");
+            request.getSession().setAttribute("change" , "利率");
             RequestDispatcher rd = request.getRequestDispatcher("/Jsp/successInterest.jsp");
             rd.forward(request,response);
         }

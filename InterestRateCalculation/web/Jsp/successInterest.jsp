@@ -22,7 +22,8 @@
     <table bgcolor="1" cellpadding="0" cellspacing="5" border="silver" align="center">
         <tr>
             <td>
-                <foot size=5 color="Navy" align="center">本利和 ： </foot>
+                <foot size=5 color="Navy" align="center">结果 ： </foot>
+                <%=session.getAttribute("change").toString()%><br/>
                 <%=session.getAttribute("compound").toString()%>
             </td>
         </tr>

@@ -15,7 +15,6 @@
         font-size : 50px;
         margin: 20px auto;;
       }
-
     </style>
     <script type="text/javascript">
       function check(form){
@@ -41,7 +40,7 @@
   <form action="<%=request.getContextPath()%>/InterestRateServlet" method="post" name="compoundInterest">
     <table bgcolor="1" cellpadding="0" cellspacing="5" border="silver" align="center">
       <tr>
-        <td align="center">本金 ： </td>
+        <td align="center" >本金 ： </td>
         <td><input type="text" name="principal"/></td>
       </tr>
       <tr>
@@ -57,6 +56,17 @@
         <td>
         <input type="radio" name="interest" value="compound"/>复利
         <input type="radio" name="interest" value="single"/>单利
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">计算类型 ：</td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center" >
+          <a href="<%=request.getContextPath()%>/index.jsp" name="change" >利息和</a>
+          <a href="<%=request.getContextPath()%>/Jsp/time.jsp" name="change" >时间</a>
+          <a href="<%=request.getContextPath()%>/Jsp/principal.jsp" name="change" >本金</a>
+          <a href="<%=request.getContextPath()%>/Jsp/interest.jsp" name="change" >利率</a>
         </td>
       </tr>
       <tr>
