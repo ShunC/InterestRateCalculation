@@ -41,4 +41,15 @@ public class Interest {
     public void setAmount(int amount) {
         this.amount = amount;
     }
+
+    public Interest() {
+    }
+
+    public Interest(double interest, int principal, int year) {
+        this.interest = interest;
+        this.principal = principal;
+        this.year = year;
+    }
+
+
 }

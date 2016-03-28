@@ -13,7 +13,7 @@ public class OrInterestService {
             I_InterestService compound = new CompoundInterestService();
             orit =  compound.calculate(interest);
         }else if(or.equals("single")){
-            System.out.println("compound");
+            System.out.println("single");
             I_InterestService compound = new SingleInterestService();
             orit =  compound.calculate(interest);
         }
