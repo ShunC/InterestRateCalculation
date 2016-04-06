@@ -53,7 +53,6 @@ public class TestAdd {
             session = HibernateFactory.openSession();
             //开始 业务 处理
             session.beginTransaction();
-
             /*
             * 用户 500 名
             * 每名用户资产信息 0 ~ 30 条
