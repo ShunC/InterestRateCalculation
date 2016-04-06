@@ -66,7 +66,6 @@ public class TestAdd {
                 }
             }
 
-
             //业务 提交
             session.getTransaction().commit();
         }catch (Exception e){
