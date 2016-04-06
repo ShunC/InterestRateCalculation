@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<!-- 在使用xml 时添加 session工厂 name="sessionFactory"-->
+	<session-factory >
+		<!-- hibernate 的 方言 用来配置连接 的 数据库-->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 连接 数据库 mysql -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- 连接 数据库 的 字符串 及 密码-->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/interest_db?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		<!-- 在使用 hibernate 的时候 显示 相应的 SQL 语言 -->
+		<property name="show_sql">true</property>
+		<!-- 自动 映射 类 到 数据库中 -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- 加入 实体类 的 映射-->
+		<mapping class="Model.User"/>
+		<mapping class="Model.Asset"/>
+
+
+	</session-factory>
+</hibernate-configuration>
